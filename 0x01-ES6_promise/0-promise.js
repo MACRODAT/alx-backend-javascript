@@ -1,5 +1,3 @@
-const getResponseFromAPI = new Promise((resolve, reject) => {
-	resolve(true);
-});
+const getResponseFromAPI = new Promise(() => {});
 
 export default getResponseFromAPI;
