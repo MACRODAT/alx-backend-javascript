@@ -1,3 +1,3 @@
-const getResponseFromAPI = new Promise(() => {});
+const getResponseFromAPI = new Promise(() => {})
 
-export default getResponseFromAPI;
+export default getResponseFromAPI
