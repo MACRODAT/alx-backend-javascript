@@ -10,7 +10,7 @@ const CountStudents = (db) => {
 	const columns = lines[0].split(',');
 	const groups = {};
   let nbr = 0;
-  for (const line in lines.slice(1)) {
+  for (const line of lines.slice(1)) {
     const data = line.split(',');
     if (data == []) {
       continue;
@@ -24,8 +24,8 @@ const CountStudents = (db) => {
     }
 	}
   console.log('Number of students: ' + nbr);
-  for (const [group, students] in groups) {
-    let s = 'Number of students in ' + String(group) + '. List: ' + students.join(', ');
+  for (const [group, students] of Object.entries(groups)) {
+    let s = 'Number of students in ' + String(group) + ': ' + students.length + '. List: ' + (students).join(', ');
     console.log(s);
   }
 }
